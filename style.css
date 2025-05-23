@@ -5,29 +5,20 @@
 }
 
 body {
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #252B42;
-    min-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
+
 
 .image-container {
     position: relative;
-    top: -45px;
-    max-width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: #252B42;
+    width: 100%;
+    height: 100vh;
     background: url('Png/dark-hero-3-cover@2x.png') no-repeat center center/cover;
 }
 
-.image-container img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    filter: brightness(50%)
-}
-
-/* gradientoverlay */
 .image-container::after {
     content: '';
     position: absolute;
@@ -35,224 +26,162 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right,
-            rgb(0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.7)25%,
-            rgb(255, 255, 255, 0.8)100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 25%, rgba(255, 255, 255, 0.8) 100%);
     mix-blend-mode: overlay;
     pointer-events: none;
 }
 
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(50%);
+}
+
+
 
 
 .navbar {
-    position: relative;
-    /* background-color: red; */
-    /* transparent background */
-    padding-left: 117px;
+    position: absolute;
     top: 20px;
-    z-index: 111;
+    left: 117px;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-right: 0px;
-
+    color: #fff;
 }
 
 nav {
     display: flex;
     align-items: center;
     gap: 80px;
-    /* space between logo and nav */
 }
 
 .logo {
-    color: rgb(255, 255, 255);
-    line-height: 32px;
     font-size: 24px;
     font-weight: 700;
-    letter-spacing: 0.1px;
-    line-height: 32px;
+    color: white;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
-    /* 30px space between each nav link */
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.2;
 }
 
 .nav-item a {
     text-decoration: none;
     color: #fff;
-
+    font-size: 14px;
 }
 
 .nav-item a:hover {
     color: #ccc;
 }
 
+
 .login {
-    position: relative;
-    text-decoration: none;
-    color: #6d09e8;
-    top: -779px;
-    padding-left: 717px;
-    list-style-type: none;
-    max-width: 100%;
+    color: #fff;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .login h2 {
-    position: absolute;
-    text-decoration: none;
-    color: #fff;
-    top: -72px;
-    padding-left: 67px;
     font-size: 23px;
 }
 
-.login li {
+.btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #23a6f0;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.headline {
+    position: absolute;
+    top: 30%;
+    left: 117px;
+    color: #fff;
     list-style: none;
 }
 
-.btn {
-    display: flex;
-    position: absolute;
-    top: -89px;
-    right: 250px;
-    padding-right: 50px;
-    border: 18px solid #23a6f0;
-    border-radius: 5px;
-    color: #ffffff;
-    background-color: #23a6f0;
-    gap: 15px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.2px;
-}
-
-.headline {
-    display: flex;
-    position: absolute;
-    top: 85px;
-    padding-left: 117px;
-    list-style-type: none;
-}
-
-.headline-text h1 {
-    position: absolute;
-    top: 165px;
-    font-size: 58px;
-    line-height: 80px;
-    letter-spacing: 0.2px;
-    color: #fff;
-    width: 400px;
-}
-
-.headline-text h4 {
-    position: absolute;
-    top: 440px;
-    color: #fff;
-    width: 340px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.2px;
-}
-
-.headline-text h5 {
-    position: absolute;
-    top: 95px;
+.headline h5 {
     color: #23a6f0;
     font-weight: 700;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.1px;
+}
+
+.headline h1 {
+    font-size: 58px;
+    line-height: 80px;
+    max-width: 400px;
+}
+
+.headline h4 {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 340px;
+    margin-top: 20px;
 }
 
 .headline .headline-btn {
-    display: block;
-    position: absolute;
-    top: 505px;
-    border: 9px solid #23a6f0;
+    margin-top: 40px;
+    padding: 10px 25px;
+    border: none;
     border-radius: 5px;
-    color: #ffffff;
     background-color: #23a6f0;
-    gap: 10px;
+    color: #fff;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.2px;
-    padding-right: 25px;
-    padding-left: 25px;
-    margin-top: 59px;
-    width: 120px;
+    cursor: pointer;
 }
+
 
 .layout1 {
-    width: 100%;
-    height: 859px;
     background-color: #252B42;
-}
-
-.layout1 .head-text {
-    /* position: absolute; */
-    /* align-content: center; */
-    padding-top: 100px;
-}
-
-
-.layout1 h6 {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.2px;
-    text-align: Center;
-    color: #23a6f0;
-    padding-top: 10px;
-}
-
-.layout1 h2 {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: 0.2px;
-    text-align: Center;
-    color: #fff;
-    padding-top: 15px;
-}
-
-.layout1 p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    text-align: Center;
-    color: #fff;
-    padding-top: 15px;
-}
-
-.layout1 li {
+    padding: 100px 20px;
+    text-align: center;
     list-style: none;
 }
 
-.white-card {
-    position: grid;
-    align-content: center;
-    top: -100px;
-    left: -100px;
+.layout1 h6 {
+    color: #23a6f0;
+    font-size: 14px;
+    font-weight: 700;
 }
+
+.layout1 h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.layout1 p {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.white-card {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+
 .white-card img {
     left: 120px;
 }
+
 li img {
     position: absolute;
     top: 40px;
@@ -372,7 +301,7 @@ li img {
     padding-left: 117px;
 }
 
- .layout2 p {
+.layout2 p {
 
     position: absolute;
     font-weight: 400;
@@ -385,7 +314,7 @@ li img {
     padding-left: 117px;
 }
 
- .layout2 a {
+.layout2 a {
     position: absolute;
     font-weight: 700;
     font-size: 14px;
@@ -457,6 +386,7 @@ li img {
     background-color: #252B42;
     /* align-content: center; */
 }
+
 .layout3 .head-text {
     position: absolute;
     top: 2750px;
@@ -570,8 +500,9 @@ li img {
     padding: 0 10px;
     background-color: #E74040;
 }
+
 .layout3 .img-card .img-btn {
-     position: absolute;
+    position: absolute;
     left: 396px;
     top: 341px;
     /* padding-right: 50px; */
@@ -667,4 +598,60 @@ li img {
     width: 500px;
     text-decoration: none;
     z-index: 111;
+}
+
+.layout3 .img-card .fa-xs {
+    position: absolute;
+    left: 155px;
+    top: 560px;
+    width: 16px;
+    height: 16px;
+    color: #23A6F0;
+}
+
+.layout3 .img-card .time {
+    position: absolute;
+    left: 175px;
+    top: 554px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+.layout3 .img-card .fa-xb {
+    position: absolute;
+    left: 255px;
+    top: 554px;
+    width: 16px;
+    height: 16px;
+    color: #E77C40;
+}
+.layout3 .img-card .book {
+    position: absolute;
+    left: 275px;
+    top: 554px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+.layout3 .img-card .fa-xc {
+    position: absolute;
+    left: 355px;
+    top: 554px;
+    width: 16px;
+    height: 16px;
+    color: #40BB15;
+}
+.layout3 .img-card .chart {
+    position: absolute;
+    left: 375px;
+    top: 554px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
 }
