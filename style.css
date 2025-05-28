@@ -9,15 +9,22 @@ body {
     background-color: #252B42;
     width: 100%;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
+
 
 
 .image-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    background: url('Png/dark-hero-3-cover@2x.png') no-repeat center center/cover;
+    height: 130vh;
+    background: url('Png/dark-hero-3-cover@2x.png') no-repeat center center / cover;
 }
+
 
 .image-container::after {
     content: '';
@@ -26,20 +33,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 25%, rgba(255, 255, 255, 0.8) 100%);
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.7) 25%,
+        rgba(255, 255, 255, 0.8) 100%
+    );
     mix-blend-mode: overlay;
     pointer-events: none;
+    z-index: 1;
 }
+
 
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     filter: brightness(50%);
+    display: block;
 }
-
-
 
 
 .navbar {
@@ -84,11 +96,18 @@ nav ul {
 
 
 .login {
+    position: absolute;
+    top: 20px;
+    right: 117px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
     margin-left: auto;
-    display: flex;
     align-items: center;
     gap: 20px;
+    list-style: none;
 }
 
 .login h2 {
@@ -96,6 +115,7 @@ nav ul {
 }
 
 .btn {
+    right: 117px;
     padding: 10px 25px;
     border: none;
     border-radius: 5px;
@@ -108,7 +128,7 @@ nav ul {
 
 .headline {
     position: absolute;
-    top: 30%;
+    top: 29%;
     left: 117px;
     color: #fff;
     list-style: none;
@@ -131,6 +151,7 @@ nav ul {
     line-height: 30px;
     max-width: 340px;
     margin-top: 20px;
+    font-weight: 400;
 }
 
 .headline .headline-btn {
@@ -147,9 +168,16 @@ nav ul {
 
 .layout1 {
     background-color: #252B42;
-    padding: 100px 20px;
+    padding-top: 180px;
     text-align: center;
     list-style: none;
+}
+
+.lay1-text {
+    /* position: absolute; */
+    text-align: center;
+    /* left: 387px; */
+
 }
 
 .layout1 h6 {
@@ -173,63 +201,34 @@ nav ul {
 .white-card {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 40px;
     margin-top: 60px;
+    padding-top: 180px;
+    flex-wrap: wrap; /* For responsiveness */
 }
 
-
-.white-card img {
-    left: 120px;
-}
-
-li img {
-    position: absolute;
-    top: 40px;
-    left: 137px;
-}
-
-.white-card .inline-img1 {
-    position: absolute;
-    top: 1250px;
-    left: 345px;
-    /*40px from the left edge */
-
-    list-style-type: none;
+.card-box {
     background-color: #fff;
-
-    width: 30px;
-    padding: 165px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-
-    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 40px 20px;
+    max-width: 300px;
+    text-align: center;
+    flex: 1 1 300px; /* Responsive cards */
 }
 
-
-
-.white-card .inline-img2 {
-    position: absolute;
-    top: 1250px;
-    left: 695px;
-    /* 40px from the left edge */
-
-    list-style-type: none;
-    background-color: #fff;
-
-    width: 30px;
-    padding: 165px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-
-    margin: 20px auto;
+.card-box img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 20px;
 }
 
 .white-card .img-text1 {
-    position: absolute;
-    top: 128px;
-    left: 115px;
+    /* position: absolute; */
+    /* top: 128px; */
+    /* left: 115px; */
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -242,9 +241,9 @@ li img {
 }
 
 .white-card .img-text2 {
-    position: absolute;
-    top: 128px;
-    left: 115px;
+    /* position: absolute; */
+    /* top: 128px; */
+    /* left: 115px; */
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -257,13 +256,10 @@ li img {
     margin-left: -51px;
 }
 
-.white-card p {
-    position: absolute;
+.card-box p {
+    
     color: #737373;
-    width: 136px;
     text-align: center;
-    top: 190px;
-    left: 89px;
     font-family: 'Monserrat' sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -271,129 +267,296 @@ li img {
     letter-spacing: 0.2px;
 }
 
-.layout2 {
+.card-box h6 {
     /* position: absolute; */
-    top: 190px;
-    bottom: 160px;
-    width: 100%;
-    height: 859px;
-    background-color: #252B42;
+    color: #E74040;
+    /* left: 139px; */
+    /* top: 177px; */
+}
+.layout2 {
+    margin-bottom: 300px;
+}
+.layout2-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
 }
 
+.lay2-text {
+    margin-left: 117px;
+    margin-top: 80px;
+}
+
+.layout2-images {
+  display: flex;
+  gap: 20px;
+}
+
+/* Style each image individually */
+.img1 {
+  position: relative;
+  top: -18px;
+  left: 290px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.img2 {
+  position: relative;
+  top: 60px;
+  left: 250px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.img3 {
+  position: relative;
+  top: 320px;
+  left: -180px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.img4 {
+  position: relative;
+  top: -10px;
+  left: -500px;
+  width: 100%;
+  height: 100%;
+  background-color: #00087e;
+    padding: 205px 199.9px;
+    border-radius: 1px 70px 5px;
+    box-shadow: 0 4px 8px #0000001a;
+    max-width: 400px;
+    margin: 20px auto; 
+}
+
+
+
+
 .layout2 h6 {
-    position: absolute;
-    font-size: 32px;
     color: #E74040;
-    width: 100%;
-    background-color: #252B42;
-    top: 333%;
-    padding-left: 117px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .layout2 h2 {
-    position: absolute;
-    font-size: 40px;
     color: #fff;
-    width: 100%;
-    height: 859px;
-    background-color: #252B42;
-    top: 2129px;
-    padding-left: 117px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .layout2 p {
-
-    position: absolute;
-    font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
     color: #fff;
-    top: 2209px;
-    width: 600px;
-    padding-left: 117px;
+    max-width: 600px;
+    margin-bottom: 20px;
 }
 
 .layout2 a {
-    position: absolute;
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.2px;
     color: #23A6F0;
-    top: 2320px;
     text-decoration: none;
-    padding-left: 117px;
 }
 
-.layout2 li {
-    list-style: none;
-}
-
-.layout2 .img1 {
-    position: absolute;
-    left: 604px;
+   .layout3 {
+    /* position: absolute; */  /* This should be removed */
+    /* background-color: #f30404; */
     z-index: 111;
-    top: 1900px;
-}
-
-.layout2 .img2 {
-    position: absolute;
-    left: 999px;
-    top: 1970px;
-    z-index: 111;
-
-}
-
-.layout2 .img3 {
-    position: absolute;
-    left: 690px;
-    top: 2220px;
-    z-index: 111;
-
-}
-
-.layout2 .img4 {
-    position: absolute;
-    left: 778px;
-    top: 1941px;
-    align-content: center;
-    list-style-type: none;
-    align-content: center;
-    background-color: #00087e;
-    width: 5px;
-    padding: 205px 199.9px;
-    border-radius: 1px 70px 5px;
-    box-shadow: 0 4px 8px #0000001a;
-    max-width: 400px;
-    margin: 20px auto;
-}
-
-.layout3 li {
-    position: absolute;
-    top: 2502px;
     text-align: center;
-    list-style: none;
-    width: 100%;
-    height: 1236;
 }
 
-.layout3 {
-    /* top: 160px; */
-    /* bottom: 160px; */
-    width: 100%;
-    height: 859px;
-    background-color: #252B42;
-    /* align-content: center; */
+/* Text section */
+.lay3-text {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
 }
 
-.layout3 .head-text {
+.lay3-text h6 {
+    color: #23A6F0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    margin-bottom: 8px;
+}
+
+.lay3-text h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.2px;
+    margin-bottom: 20px;
+}
+
+.lay3-text p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+
+/* Cards container */
+.img-card {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Individual card */
+.img-card > div {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 330px;
+    color: #252B42;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+}
+
+/* Image inside card */
+.img-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Sale badge */
+.Sale {
     position: absolute;
-    top: 2750px;
+    top: 20px;
+    left: 20px;
+    background-color: #E74040;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
 }
 
-.layout3 h6 {
-    /* position: absolute; */
+/* Star rating button */
+.img-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #252B42;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: default;
+}
+
+/* Department link */
+.img-card a {
+    color: #23A6F0;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* Design title */
+.Design {
+    font-weight: 700;
+    font-size: 16px;
+    color: #252B42;
+    margin-bottom: 12px;
+}
+
+/* Description paragraph */
+.img-card p {
+    color: #737373;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+/* Sales info */
+.img-card h6 {
+    font-weight: 400;
+    color: #737373;
+    margin-bottom: 4px;
+}
+
+/* Prices */
+.img-card h5 {
+    font-weight: 400;
+    color: #737373;
+    font-size: 16px;
+    margin: 0 10px 10px 0;
+    display: inline-block;
+}
+
+.img-card .Price {
+    color: #40BB15;
+    font-weight: 700;
+}
+
+/* Info row with icons */
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #737373;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Icons styling */
+.info-row i {
+    color: inherit;
+    font-size: 16px;
+}
+
+/* Specific colors for icons */
+.info-row .fa-book {
+    color: #e27236;
+}
+
+.info-row .fa-clock {
+    color: #23A6F0;
+}
+
+.info-row .fa-chart-area {
+    color: #40BB15;
+}
+
+/* Paragraphs next to icons */
+.info-row p {
+    margin: 0;
+}
+
+
+.layout4 {
+    /* Remove absolute and padding */
+    z-index: 111;
+    text-align: center;
+    margin-top: 60px; /* or whatever space you want */
+    list-style: none;
+}
+
+
+.lay4-text h6 {
+    /* position: inherit; */
     text-align: center;
     list-style: none;
     color: #23A6F0;
@@ -403,10 +566,11 @@ li img {
     letter-spacing: 0.2px;
     text-align: center;
     /* padding-left: 176px; */
+    padding-top: -50px;
 }
 
-.layout3 h2 {
-    /* position: absolute; */
+.lay4-text h2 {
+    /* position: inherit; */
     text-align: center;
     list-style: none;
     color: #fff;
@@ -416,10 +580,11 @@ li img {
     letter-spacing: 0.2px;
     text-align: center;
     /* padding-left: 176px; */
+    padding-top: 3px;
 }
 
-.layout3 p {
-    /* position: absolute; */
+.lay4-text p {
+    /* position: inherit; */
     text-align: center;
     list-style: none;
     color: #fff;
@@ -430,228 +595,271 @@ li img {
     /* padding-left: 176px; */
 }
 
-.layout3 .img-card {
-    position: absolute;
-    list-style: none;
+.lay4-img {
+    display: flex;
+    gap: 30px;
     justify-content: center;
-    top: 400px;
-    left: -80px;
-    gap: 500px;
-    z-index: 111;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.layout3 .img-card li {
-
-    gap: 500px;
-}
-
-.layout3 .img1 {
-    position: absolute;
-    left: 304px;
-    z-index: 11;
-    /* top:2900px; */
-}
-
-.layout3 .img4 {
-    position: absolute;
-    left: 441px;
-    top: 2650px;
+.profile-card {
     background-color: #fff;
-    width: 30px;
-    padding: 220px 165px;
-    border-radius: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 20px auto;
+    padding: 35px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 330px;
+    /* Bigger card width */
 }
 
-.layout3 .img2 {
-    position: absolute;
-    left: 704px;
-    z-index: 111;
-    /* top:2900px; */
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0px;
 }
 
-.layout3 .img3 {
-    position: absolute;
-    left: 840.9px;
-    top: 2650px;
-    align-content: center;
-    background-color: #fff;
-    width: 30px;
-    padding: 220px 165px;
-    border-radius: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 20px auto;
+.profile-card p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #737373;
+    letter-spacing: 0.2px;
+    font-weight: 400;
 }
 
-.layout3 .img-card .Sale {
-    position: absolute;
-    left: 160px;
-    top: 63px;
-    color: #fff;
+.fa-star {
+    color: #F3CD03;
+}
+
+.profile-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+
+}
+
+.profile-card h6 {
     font-size: 14px;
     font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+.layout5 {
+    background-color: #252B42;
+    padding-top: 180px;
+    text-align: center;
+    list-style: none;
+}
+
+.layout5 .lay5-text {
+    /* position: absolute; */
+    text-align: center;
+    /* left: 387px; */
+}
+
+.lay5-text h6 {
+    /* position: inherit; */
+    text-align: center;
+    list-style: none;
+    color: #23A6F0;
+    font-weight: 700;
+    font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.2px;
     text-align: center;
-    width: auto;
-    padding: 0 10px;
-    background-color: #E74040;
+    /* padding-left: 176px; */
+    padding-top: -50px;
 }
 
-.layout3 .img-card .img-btn {
-    position: absolute;
-    left: 396px;
-    top: 341px;
-    /* padding-right: 50px; */
-    border-radius: 20px;
-    color: #ffffff;
-    background-color: #252B42;
-    gap: 15px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 22px;
+.lay5-text h2 {
+    /* position: inherit; */
+    text-align: center;
+    list-style: none;
+    color: #fff;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 50px;
     letter-spacing: 0.2px;
+    text-align: center;
+    /* padding-left: 176px; */
+    padding-top: 3px;
 }
 
-.layout3 .img-card a {
-    position: absolute;
-    left: -20px;
-    top: 341px;
-    color: #23A6F0;
-    font-family: 'Monserrat', sans-serif;
-    font-size: 14px;
-    font-weight: bolder;
-    line-height: 24px;
-    letter-spacing: 0.2px;
-    width: 500px;
-    text-decoration: none;
-}
-
-.layout3 .img-card .Design {
-    position: absolute;
-    left: -33px;
-    top: 370px;
-    color: #252B42;
-    font-family: 'Monserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.1px;
-    width: 500px;
-    text-decoration: none;
-
-}
-
-.layout3 .img-card p {
-    position: absolute;
-    left: 157px;
-    top: 420px;
-    color: #737373;
-    font-size: 16px;
+.lay5-text p {
+    /* position: inherit; */
+    text-align: center;
+    list-style: none;
+    color: #fff;
     font-weight: 400;
-    text-align: left;
+    font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.2px;
-    width: 500px;
-    text-decoration: none;
-
+    /* padding-left: 176px; */
 }
 
-.layout3 .img-card h6 {
-    position: absolute;
-    left: -40px;
-    top: 480px;
-    color: #737373;
+.email-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.email-form input[type="email"] {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+.email-form input[type="email"]:focus {
+    border-color: #007bff;
+}
+
+.email-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #23A6F0;
+    border: 1px solid #fff;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    /* Size of the text */
+    font-weight: 400;
+    line-height: 28px;
+    /* Make text bold */
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    /* Text color */
+    font-family: 'Montserrat', sans-serif;
+    /* Font family */
+}
+
+.email-form button:hover {
+    background-color: #0056b3;
+}
+
+.layout6 {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-align: left;
+    padding-top: 180px;
+    gap: 70px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* adds space between h3, p, and icon container */
+}
+
+.layout6 h3 {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+}
+
+.contacts p {
+    margin: 0;
+    line-height: 1.5;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    /* Adds a little space between icons */
+}
+
+.social-icons a {
+    color: #23A6F0;
+    /* Set the icon color */
+    font-size: 24px;
+    /* Icon size */
+    text-decoration: none;
+    /* Remove underline (not necessary for icons, but good practice) */
+    transition: transform 0.2s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+    color: #1a8cd8;
+    /* Optional: darker shade on hover */
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* space between heading and links */
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* space between each link */
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.2px;
-    width: 500px;
-    text-decoration: none;
 }
 
-.layout3 .img-card h5 {
-    position: absolute;
-    left: -65px;
-    top: 520px;
-    color: #737373;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.1px;
-    width: 500px;
-    text-decoration: none;
+.links a:hover {
+    color: #007bff;
 }
 
-.layout3 .img-card .Price {
-    position: absolute;
-    left: -15px;
-    top: 521.px;
-    color: #40BB15;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.1px;
-    width: 500px;
-    text-decoration: none;
-    z-index: 111;
+.Features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* space between heading and links */
 }
 
-.layout3 .img-card .fa-xs {
-    position: absolute;
-    left: 155px;
-    top: 560px;
-    width: 16px;
-    height: 16px;
-    color: #23A6F0;
+.Resources {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* space between heading and links */
 }
 
-.layout3 .img-card .time {
-    position: absolute;
-    left: 175px;
-    top: 554px;
-    height: 16px;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-}
-.layout3 .img-card .fa-xb {
-    position: absolute;
-    left: 255px;
-    top: 554px;
-    width: 16px;
-    height: 16px;
-    color: #E77C40;
-}
-.layout3 .img-card .book {
-    position: absolute;
-    left: 275px;
-    top: 554px;
-    height: 16px;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-}
-.layout3 .img-card .fa-xc {
-    position: absolute;
-    left: 355px;
-    top: 554px;
-    width: 16px;
-    height: 16px;
-    color: #40BB15;
-}
-.layout3 .img-card .chart {
-    position: absolute;
-    left: 375px;
-    top: 554px;
-    height: 16px;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-}
+
+
+
+
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 1280px) {}
