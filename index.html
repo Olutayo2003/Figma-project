@@ -8,7 +8,9 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -16,16 +18,26 @@
 
 <body>
     <div class="navbar">
-        <nav>
-            <h3 class="logo">BrandName</h3>
-            <ul>
-                <li class="nav-item"><a href="#topics">Home</a></li>
-                <li class="nav-item"><a href="#reviews">Product</a></li>
-                <li class="nav-item"><a href="#pricing">Pricing</a></li>
-                <li class="nav-item"><a href="#Contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">
+    <i class="fa-solid fa-bars"></i>
+  </label>
+
+  <nav>
+    <h3 class="logo">BrandName</h3>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#topics">Home</a></li>
+      <li class="nav-item"><a href="#reviews">Product</a></li>
+      <li class="nav-item"><a href="#pricing">Pricing</a></li>
+      <li class="nav-item"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+
+
+
     <div class="login">
         <li class="login-page">
             <h2>Login</h2>
@@ -35,8 +47,9 @@
         </a>
     </div>
     <div class="image-container">
-        <img src="Png/dark-hero-3-cover@2x.png" alt="img">
+        <img src="Png/dark-hero-3-cover@2x.png" alt="Background image">
     </div>
+
 
     <div class="headline">
         <li class="headline-text">
@@ -64,40 +77,40 @@
                 <img src="Png/fixed-width.png">
                 <h5>Training Courses</h5>
                 <h6>&#x2501;&#x2501;</h6>
-                <p>The gradual
-                    accumulation and
+                <p>The gradual <br>
+                    accumulation and <br>
                     small-scale..</p>
             </div>
             <div class="card-box">
                 <img src="Png/fixed-width-1.png">
                 <h5>Training Courses</h5>
                 <h6>&#x2501;&#x2501;</h6>
-                <p>The gradual
-                    accumulation and
+                <p>The gradual <br>
+                    accumulation and <br>
                     small-scale..</p>
             </div>
         </div>
     </div>
     <section class="layout2">
-  <div class="layout2-content">
-    <div class="lay2-text">
-      <h6>&#x2501;&#x2501;</h6>
-      <h2>Watch our Courses</h2>
-      <p>
-        Problems trying to resolve the conflict between <br>
-        the two major realms of Classical physics: Newtonian mechanics
-      </p>
-      <a href="#join">Learn More &rsaquo;</a>
-    </div>
+        <div class="layout2-content">
+            <div class="lay2-text">
+                <h6>&#x2501;&#x2501;</h6>
+                <h2>Watch our Courses</h2>
+                <p>
+                    Problems trying to resolve the conflict between <br>
+                    the two major realms of Classical physics: Newtonian mechanics
+                </p>
+                <a href="#join">Learn More &rsaquo;</a>
+            </div>
 
-    <div class="layout2-images">
-      <img src="Png/Rectangle 320.png" alt="profile1" class="img1">
-      <img src="Png/image 10.png" alt="profile2" class="img2">
-      <img src="Png/image 12.png" alt="profile3" class="img3">
-      <img src="Png/facebook.png" alt="background" class="img4">
-    </div>
-  </div>
-</section>
+            <div class="layout2-images">
+                <img src="Png/Rectangle 320.png" alt="profile1" class="img1">
+                <img src="Png/image 10.png" alt="profile2" class="img2">
+                <img src="Png/image 12.png" alt="profile3" class="img3">
+                <img src="Png/facebook.png" alt="background" class="img4">
+            </div>
+        </div>
+    </section>
 
 
 
@@ -117,8 +130,8 @@
             <div class="img-box1">
                 <img src="Png/product-cover-177.png" alt="bulb-png">
                 <h6 class="Sale">Sale</h6>
-                <button class="img-btn">&#11088; 4.9</button>
                 <a href="#Department">English Department</a>
+                <h2 class="rating">&#11088; 4.9</h2>
                 <h5 class="Design">Graphic Design</h5>
                 <p>
                     We focus on ergonomics and meeting <br>
@@ -126,8 +139,7 @@
                     keystroke away.
                 </p>
                 <h6>15 Sales</h6>
-                <h5><del>$16.48</del></h5>
-                <h5 class="Price">$16.48</h5>
+                <h5 class="Price"><del>$16.48</del>&nbsp;&nbsp;$16.48</h5>
                 <div class="info-row">
                     <i class="fa-regular fa-clock"></i>
                     <p class="time">22hr 30min</p>
@@ -142,8 +154,8 @@
             <div class="img-box2">
                 <img src="Png/product-cover-176.png" alt="dude-png" width="330" height="300">
                 <h6 class="Sale">Sale</h6>
-                <button class="img-btn">&#11088; 4.9</button>
                 <a href="#Department">English Department</a>
+                <h2 class="rating">&#11088; 4.9</h2>
                 <h5 class="Design">Graphic Design</h5>
                 <p>
                     We focus on ergonomics and meeting <br>
@@ -151,8 +163,7 @@
                     keystroke away.
                 </p>
                 <h6>15 Sales</h6>
-                <h5><del>$16.48</del></h5>
-                <h5 class="Price">$16.48</h5>
+                <h5 class="Price"><del>$16.48</del>&nbsp;&nbsp;$16.48</h5>
                 <div class="info-row">
                     <i class="fa-regular fa-clock"></i>
                     <p class="time">22hr 30min</p>
@@ -266,6 +277,21 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+    <!-- <script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script> -->
+
 </body>
 
 </html>
