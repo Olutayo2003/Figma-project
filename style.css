@@ -5246,7 +5246,7 @@ nav ul {
         position: inherit;
         display: block;
         top: 20px;
-        margin-left: 210px;
+        margin-left: 240px;
         padding: 20px;
         border-radius: 8px;
         width: 50%;
@@ -5326,7 +5326,13 @@ nav ul {
     cursor: pointer;
 
     }
-a
+.headline {
+        position: absolute;
+        top: 19%;
+        left: 20px;
+        color: #fff;
+        list-style: none;
+    }
 
     
 .layout1 {
