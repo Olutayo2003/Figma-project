@@ -5013,7 +5013,7 @@ nav ul {
         position: inherit;
         display: block;
         top: 20px;
-        margin-left: 220px;
+        margin-left: 260px;
         padding: 20px;
         border-radius: 8px;
         width: 30%;
@@ -5094,7 +5094,7 @@ nav ul {
 
     .headline {
         position: absolute;
-        top: 22%;
+        top: 20%;
         left: 20px;
         color: #fff;
         list-style: none;
