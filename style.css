@@ -5012,8 +5012,8 @@ nav ul {
     .nav-menu {
         position: inherit;
         display: block;
-        top: 20px;
-        margin-left: 260px;
+        top: -1px;
+        margin-left: 259px;
         padding: 20px;
         border-radius: 8px;
         width: 30%;
@@ -5041,8 +5041,8 @@ nav ul {
         display: block;
         position: absolute;
         /* Make it positionable */
-        top: 20px;
-        right: 50px;
+        top: -2px;
+        right: 45px;
         /* Push to right side */
         cursor: pointer;
         z-index: 1000;
@@ -5094,7 +5094,7 @@ nav ul {
 
     .headline {
         position: absolute;
-        top: 20%;
+        top: 17%;
         left: 20px;
         color: #fff;
         list-style: none;
