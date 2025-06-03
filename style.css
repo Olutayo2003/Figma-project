@@ -5057,9 +5057,9 @@ nav ul {
     }
 
     .login {
-        margin-left: -12px;
+        margin-right: 150px;
         top: 50px;
-        left: -28px;
+        left: -38px;
         padding-left: 60px;
         /* pushes content 50px from left edge */
         display: flex;
@@ -5092,15 +5092,15 @@ nav ul {
 
     }
 
-    /* .headline {
+    .headline {
         position: absolute;
-        top: 20%;
-        left: 50px;
+        top: 22%;
+        left: 20px;
         color: #fff;
         list-style: none;
     }
 
-    .headline h5 {
+    /*.headline h5 {
         color: #23a6f0;
         font-weight: 700;
         font-size: 12px;
@@ -5292,7 +5292,7 @@ nav ul {
     }
 
    .login {
-        margin-right: 160px;
+        margin-right: 150px;
         top: 50px;
         left: -28px;
         padding-left: 60px;
@@ -5967,9 +5967,9 @@ a
     }
 
     .login {
-        margin-right: 150px;
+        margin-right: 130px;
         top: 50px;
-        left: -28px;
+        left: -37px;
         padding-left: 60px;
         /* pushes content 50px from left edge */
         display: flex;
@@ -6002,15 +6002,15 @@ a
 
     }
 
-    /* .headline {
+.headline {
         position: absolute;
         top: 20%;
-        left: 50px;
+        left: 20px;
         color: #fff;
         list-style: none;
     }
 
-    .headline h5 {
+    /*.headline h5 {
         color: #23a6f0;
         font-weight: 700;
         font-size: 12px;
