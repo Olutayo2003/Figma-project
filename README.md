@@ -15,7 +15,8 @@ This project features a clean, user-friendly design with sections for course det
 
 
 # Preview
-Screenshot 2025-06-04 150354.png
+![image](https://github.com/user-attachments/assets/3e8c3127-6f96-4b30-a163-f827b2fb65cb)
+
 
 # Structure
 ├── index.html
