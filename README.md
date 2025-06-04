@@ -62,10 +62,10 @@ Total of two weeks to complete.
 # Contact
 For feedback or collaboration, feel free to reach out:
 
-Email: olutayo404@gmail.com
+Email: "olutayo404@gmail.com"
 
-LinkedIn: Olutayo K. Akinkumi    
+LinkedIn: "https://www.linkedin.com/in/olutayo-k-akinkumi-ba9647363"    
 
-Twitter: @AkinkumiK68787
+Twitter: "https://x.com/AkinkumiK68787"
 
-GitHub: Olutayo2003
+GitHub: "https://github.com/Olutayo2003"
