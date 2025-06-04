@@ -15,7 +15,8 @@ This project features a clean, user-friendly design with sections for course det
 
 
 # Preview
-![image](https://github.com/user-attachments/assets/3e8c3127-6f96-4b30-a163-f827b2fb65cb)
+![image](https://github.com/user-attachments/assets/d26902a6-a26f-41ce-9e19-72c149cdaf98)
+
 
 
 # Structure
