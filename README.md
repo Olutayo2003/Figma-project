@@ -5,12 +5,19 @@ This project features a clean, user-friendly design with sections for course det
 
 # Features
 -Responsive navigation bar with toggle
+
 -Hero section with call-to-action
+
 -Course packages and product cards
+
 -Testimonials from users
+
 -Email subscription form
+
 -Social media integration
+
 -Fully responsive layout using HTML & CSS
+
 -Font Awesome & Boxicons integration
 
 
@@ -20,18 +27,27 @@ This project features a clean, user-friendly design with sections for course det
 
 
 # Structure
+
 ├── index.html
+
 ├── style.css
+
 └── Png/
+
     └── (contains the images used in the website)
 
 
 
 # Technologies Used
+
 -HTML5
+
 -CSS3
+
 -Google Fonts (Montserrat)
+
 -Font Awesome
+
 -Boxicons
 
 # Notes
