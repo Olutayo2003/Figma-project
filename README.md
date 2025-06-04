@@ -15,7 +15,7 @@ This project features a clean, user-friendly design with sections for course det
 
 
 # Preview
-"C:\Users\DELL\Pictures\Screenshot 2025-06-04 150354.png"
+Screenshot 2025-06-04 150354.png
 
 # Structure
 ├── index.html
